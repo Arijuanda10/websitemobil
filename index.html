@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -152,7 +153,10 @@
 		<div class="car">
             <div class="car-details">
                 <h3>Menyediakan Jenis Mobil Lainya</h3>
-                <p>( Pajero, Fortuner, Hiace, Alhpart.)</p>
+                <p>1. Pajero</p> 
+				<p>2. Fortuner</p> 
+				<p>3. Hiace</p> 
+				<p>4. Alhpart.</p>
             </div>
         </div>
 		
@@ -162,8 +166,8 @@
                 <p>Terima jasa ( Supir, Rental Mobil Bulanan/ Mingguan/ Harian, Antar jemput bandara, Antar jemput pelabuhan
 								, Paket tour wisata Sumut/Luar Sumut 
 
-				<p>NB	:Pemesanan/booking sesuai ketentuanan yg berlaku </p>
-				 <p1>	: Rentcar lepas kunci sesuai ketentuan yang berlaku.</p1>
+				<p>NB:Pemesanan/booking sesuai ketentuanan yg berlaku</p> 
+				 <p1>:Rentcar lepas kunci sesuai ketentuan yang berlaku.</p1>
 				</p>
             </div>
         </div>
@@ -174,10 +178,29 @@
                 <p>+62 821-6353-6349 & +62 877-7399-5172</p>
                 <p>Untuk Weekend/Hari Besar Harga Berbeda.</p>
 				<p>Silahkan Klik WhatsApp Di Bawah</p>
-				<button onclick="window.open('https://wa.me/+6282163536349?text=Halo%20saya%20ingin%20sewa%20mobil', '_blank')">
-  <h2>Pesan via WhatsApp</h2>
-</button>
+				<button onclick="kirimWA()"><h3>Pesan via WhatsApp</h3></button>
 
+    <script>
+        function kirimWA() {
+            let nama = document.getElementById('nama').value;
+            let nohp = document.getElementById('nohp').value;
+            let mobil = document.getElementById('mobil').value;
+            let tanggal = document.getElementById('tanggal').value;
+
+            // Nomor WA tujuan tanpa tanda +
+            let noWaTujuan = "6282163536349"; // Ganti dengan nomor WA admin
+
+            let pesan = `Halo, saya ingin rental mobil di Rentalmobil.JUN.%0A` +
+                        `Nama: ${nama}%0A` +
+                        `No HP: ${nohp}%0A` +
+                        `Jenis Mobil: ${mobil}%0A` +
+                        `Tanggal Sewa: ${tanggal}`;
+
+            let url = `https://wa.me/${+6282163536349}?text=${pesan}`;
+            window.open(url, '_blank');
+        }
+    </script>
+</button>
             </div>
         </div>
     </div>
