@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -178,7 +177,7 @@
                 <p>+62 821-6353-6349 & +62 877-7399-5172</p>
                 <p>Untuk Weekend/Hari Besar Harga Berbeda.</p>
 				<p>Silahkan Klik WhatsApp Di Bawah</p>
-				<button onclick="kirimWA()"><h3>Pesan via WhatsApp</h3></button>
+				<button onclick="kirimWA()">Pesan via WhatsApp</button>
 
     <script>
         function kirimWA() {
@@ -190,17 +189,18 @@
             // Nomor WA tujuan tanpa tanda +
             let noWaTujuan = "6282163536349"; // Ganti dengan nomor WA admin
 
-            let pesan = `Halo, saya ingin rental mobil di Rentalmobil.JUN.%0A` +
+            let pesan = `Halo, saya ingin rental mobil.%0A` +
                         `Nama: ${nama}%0A` +
                         `No HP: ${nohp}%0A` +
                         `Jenis Mobil: ${mobil}%0A` +
                         `Tanggal Sewa: ${tanggal}`;
 
-            let url = `https://wa.me/${+6282163536349}?text=${pesan}`;
+            let url = `https://wa.me/${noWaTujuan}?text=${pesan}`;
             window.open(url, '_blank');
         }
     </script>
 </button>
+
             </div>
         </div>
     </div>
